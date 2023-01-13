@@ -58,6 +58,6 @@ server.applyMiddleware({
   },
 });
 
-const port = process.env.PORT;
+const port = process.env.PORT || "8888";
 
 app.listen(port, () => console.log(`\n** Running on port ${port} 🚀 **\n`));

@@ -5,6 +5,10 @@ exports.up = function (knex) {
     tbl.text("link").notNullable();
     tbl.text("type").notNullable();
     tbl.text("bonuses").notNullable();
+    tbl.integer("traits").nullable();
+    tbl.text("location").nullable();
+    tbl.text("dlc").nullable();
+    tbl.text("obtainableItems").notNullable();
   });
 };
 

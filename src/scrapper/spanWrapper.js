@@ -1,134 +1,133 @@
 function spanWrapper(string) {
+  if(!string) return
   return string
-    .replace(/Maximum\sHealth/g, "<span class='health'>Maximum Health</span>")
-    .replace(/Healing\sTaken/g, "<span class='health'>Healing Taken</span>")
-    .replace(/Health\sRecovery/g, "<span class='health'>Health Recovery</span>")
+    .replace(/Maximum\sHealth/g, "Maximum Health")
+    .replace(/Healing\sTaken/g, "Healing Taken")
+    .replace(/Health\sRecovery/g, "Health Recovery")
     .replace(
       /Maximum\sStamina/g,
-      "<span class='stamina'>Maximum Stamina</span>"
+      "Maximum Stamina"
     )
     .replace(
       /Stamina\sRecovery/g,
-      "<span class='stamina'>Stamina Recovery</span>"
+      "Stamina Recovery"
     )
     .replace(
       /Maximum\sMagicka/g,
-      "<span class='magicka'>Maximum Magicka</span>"
+      "Maximum Magicka"
     )
     .replace(
       /Magicka\sRecovery/g,
-      "<span class='magicka'>Magicka Recovery</span>"
+      "Magicka Recovery"
     )
     .replace(
       /Physical\sResistance/g,
-      "<span class='p-resist'>Physical Resistance</span>"
+      "Physical Resistance"
     )
     .replace(
       /Spell\sResistance/g,
-      "<span class='s-resist'>Physical Resistance</span>"
+      "Spell Resistance"
     )
-    .replace(/Weapon\sDamage/g, "<span class='weapon'>Weapon Damage</span>")
-    .replace(/Weapon\sCritical/g, "<span class='weapon'>Weapon Critical</span>")
-    .replace(/Spell\sDamage/g, "<span class='spell'>Spell Damage</span>")
-    .replace(/Spell\sCritical/g, "<span class='spell'>Spell Critical</span>")
-    .replace(/Major\sAegis/g, "<span class='buff'>Major Aegis</span>")
-    .replace(/Minor\sAegis/g, "<span class='buff'>Minor Aegis</span>")
-    .replace(/Major\sBerserk/g, "<span class='buff'>Major Berserk</span>")
-    .replace(/Minor\sBerserk/g, "<span class='buff'>Minor Berserk</span>")
-    .replace(/Major\sBrutality/g, "<span class='buff'>Major Brutality</span>")
-    .replace(/Minor\sBrutality/g, "<span class='buff'>Minor Brutality</span>")
-    .replace(/Major\sCourage/g, "<span class='buff'>Major Courage</span>")
-    .replace(/Minor\sCourage/g, "<span class='buff'>Minor Courage</span>")
-    .replace("Empower", "<span class='buff'>Empower</span>")
-    .replace(/Major\sEndurance/g, "<span class='buff'>Major Endurance</span>")
-    .replace(/Minor\sEndurance/g, "<span class='buff'>Minor Endurance</span>")
-    .replace(/Major\sEvasion/g, "<span class='buff'>Major Evasion</span>")
-    .replace(/Minor\sEvasion/g, "<span class='buff'>Minor Evasion</span>")
-    .replace(/Major\sExpedition/g, "<span class='buff'>Major Expedition</span>")
-    .replace(/Minor\sExpedition/g, "<span class='buff'>Minor Expedition</span>")
-    .replace(/Major\sForce/g, "<span class='buff'>Major Force</span>")
-    .replace(/Minor\sForce/g, "<span class='buff'>Minor Force</span>")
-    .replace(/Major\sFortitude/g, "<span class='buff'>Major Fortitude</span>")
-    .replace(/Minor\sFortitude/g, "<span class='buff'>Minor Fortitude</span>")
-    .replace(/Major\sGallop/g, "<span class='buff'>Major Gallop</span>")
-    .replace(/Minor\sGallop/g, "<span class='buff'>Minor Gallop</span>")
-    .replace(/Major\sHeroism/g, "<span class='buff'>Major Heroism</span>")
-    .replace(/Minor\sHeroism/g, "<span class='buff'>Minor Heroism</span>")
-    .replace(/Major\sIntellect/g, "<span class='buff'>Major Intellect</span>")
-    .replace(/Minor\sIntellect/g, "<span class='buff'>Minor Intellect</span>")
-    .replace(/Major\sMending/g, "<span class='buff'>Major Mending</span>")
-    .replace(/Minor\sMending/g, "<span class='buff'>Minor Mending</span>")
-    .replace(/Major\sProphecy/g, "<span class='buff'>Major Prophecy</span>")
-    .replace(/Minor\sProphecy/g, "<span class='buff'>Minor Prophecy</span>")
-    .replace(/Major\sProtection/g, "<span class='buff'>Major Protection</span>")
-    .replace(/Minor\sProtection/g, "<span class='buff'>Minor Protection</span>")
-    .replace(/Major\sResolve/g, "<span class='buff'>Major Resolve</span>")
-    .replace(/Minor\sResolve/g, "<span class='buff'>Minor Resolve</span>")
-    .replace(/Major\sSavagery/g, "<span class='buff'>Major Savagery</span>")
-    .replace(/Minor\sSavagery/g, "<span class='buff'>Minor Savagery</span>")
-    .replace(/Major\sSlayer/g, "<span class='buff'>Major Slayer</span>")
-    .replace(/Minor\sSlayer/g, "<span class='buff'>Minor Slayer</span>")
-    .replace(/Major\sSorcery/g, "<span class='buff'>Major Sorcery</span>")
-    .replace(/Minor\sSorcery/g, "<span class='buff'>Minor Sorcery</span>")
-    .replace(/Major\sToughness/g, "<span class='buff'>Major Toughness</span>")
-    .replace(/Minor\sToughness/g, "<span class='buff'>Minor Toughness</span>")
-    .replace(/Major\sVitality/g, "<span class='buff'>Major Vitality</span>")
-    .replace(/Minor\sVitality/g, "<span class='buff'>Minor Vitality</span>")
-    .replace(/Major\sBreach/g, "<span class='debuff'>Major Breach</span>")
-    .replace(/Minor\sBreach/g, "<span class='debuff'>Minor Breach</span>")
-    .replace(/Major\sCowardice/g, "<span class='debuff'>Major Cowardice</span>")
-    .replace(/Minor\sCowardice/g, "<span class='debuff'>Minor Cowardice</span>")
-    .replace(/Major\sDefile/g, "<span class='debuff'>Major Defile</span>")
-    .replace(/Minor\sDefile/g, "<span class='debuff'>Minor Defile</span>")
+    .replace(/Weapon\sDamage/g, "Weapon Damage")
+    .replace(/Weapon\sCritical/g, "Weapon Critical")
+    .replace(/Spell\sDamage/g, "Spell Damage")
+    .replace(/Spell\sCritical/g, "Spell Critical")
+    .replace(/Major\sAegis/g, "Major Aegis")
+    .replace(/Minor\sAegis/g, "Minor Aegis")
+    .replace(/Major\sBerserk/g, "Major Berserk")
+    .replace(/Minor\sBerserk/g, "Minor Berserk")
+    .replace(/Major\sBrutality/g, "Major Brutality")
+    .replace(/Minor\sBrutality/g, "Minor Brutality")
+    .replace(/Major\sCourage/g, "Major Courage")
+    .replace(/Minor\sCourage/g, "Minor Courage")
+    .replace(/Major\sEndurance/g, "Major Endurance")
+    .replace(/Minor\sEndurance/g, "Minor Endurance")
+    .replace(/Major\sEvasion/g, "Major Evasion")
+    .replace(/Minor\sEvasion/g, "Minor Evasion")
+    .replace(/Major\sExpedition/g, "Major Expedition")
+    .replace(/Minor\sExpedition/g, "Minor Expedition")
+    .replace(/Major\sForce/g, "Major Force")
+    .replace(/Minor\sForce/g, "Minor Force")
+    .replace(/Major\sFortitude/g, "Major Fortitude")
+    .replace(/Minor\sFortitude/g, "Minor Fortitude")
+    .replace(/Major\sGallop/g, "Major Gallop")
+    .replace(/Minor\sGallop/g, "Minor Gallop")
+    .replace(/Major\sHeroism/g, "Major Heroism")
+    .replace(/Minor\sHeroism/g, "Minor Heroism")
+    .replace(/Major\sIntellect/g, "Major Intellect")
+    .replace(/Minor\sIntellect/g, "Minor Intellect")
+    .replace(/Major\sMending/g, "Major Mending")
+    .replace(/Minor\sMending/g, "Minor Mending")
+    .replace(/Major\sProphecy/g, "Major Prophecy")
+    .replace(/Minor\sProphecy/g, "Minor Prophecy")
+    .replace(/Major\sProtection/g, "Major Protection")
+    .replace(/Minor\sProtection/g, "Minor Protection")
+    .replace(/Major\sResolve/g, "Major Resolve")
+    .replace(/Minor\sResolve/g, "Minor Resolve")
+    .replace(/Major\sSavagery/g, "Major Savagery")
+    .replace(/Minor\sSavagery/g, "Minor Savagery")
+    .replace(/Major\sSlayer/g, "Major Slayer")
+    .replace(/Minor\sSlayer/g, "Minor Slayer")
+    .replace(/Major\sSorcery/g, "Major Sorcery")
+    .replace(/Minor\sSorcery/g, "Minor Sorcery")
+    .replace(/Major\sToughness/g, "Major Toughness")
+    .replace(/Minor\sToughness/g, "Minor Toughness")
+    .replace(/Major\sVitality/g, "Major Vitality")
+    .replace(/Minor\sVitality/g, "Minor Vitality")
+    .replace(/Major\sBreach/g, "Major Breach")
+    .replace(/Minor\sBreach/g, "Minor Breach")
+    .replace(/Major\sCowardice/g, "Major Cowardice")
+    .replace(/Minor\sCowardice/g, "Minor Cowardice")
+    .replace(/Major\sDefile/g, "Major Defile")
+    .replace(/Minor\sDefile/g, "Minor Defile")
     .replace(
       /Major\sEnervation/g,
-      "<span class='debuff'>Major Enervation</span>"
+      "Major Enervation"
     )
     .replace(
       /Minor\sEnervation/g,
-      "<span class='debuff'>Minor Enervation</span>"
+      "Minor Enervation"
     )
-    .replace(/Major\sFracture/g, "<span class='debuff'>Major Fracture</span>")
-    .replace(/Minor\sFracture/g, "<span class='debuff'>Minor Fracture</span>")
+    .replace(/Major\sFracture/g, "Major Fracture")
+    .replace(/Minor\sFracture/g, "Minor Fracture")
     .replace(
       /Major\sHinderance/g,
-      "<span class='debuff'>Major Hinderance</span>"
+      "Major Hinderance"
     )
     .replace(
       /Minor\sHinderance/g,
-      "<span class='debuff'>Minor Hinderance</span>"
+      "Minor Hinderance"
     )
-    .replace(/Major\sLifesteal/g, "<span class='debuff'>Major Lifesteal</span>")
-    .replace(/Minor\sLifesteal/g, "<span class='debuff'>Minor Lifesteal</span>")
+    .replace(/Major\sLifesteal/g, "Major Lifesteal")
+    .replace(/Minor\sLifesteal/g, "Minor Lifesteal")
     .replace(
       /Major\sMagickasteal/g,
-      "<span class='debuff'>Major Magickasteal</span>"
+      "Major Magickasteal"
     )
     .replace(
       /Minor\sMagickasteal/g,
-      "<span class='debuff'>Minor Magickasteal</span>"
+      "Minor Magickasteal"
     )
-    .replace(/Major\sMaim/g, "<span class='debuff'>Major Maim</span>")
-    .replace(/Minor\sMaim/g, "<span class='debuff'>Minor Maim</span>")
-    .replace(/Major\sMangle/g, "<span class='debuff'>Major Mangle</span>")
-    .replace(/Minor\sMangle/g, "<span class='debuff'>Minor Mangle</span>")
+    .replace(/Major\sMaim/g, "Major Maim")
+    .replace(/Minor\sMaim/g, "Minor Maim")
+    .replace(/Major\sMangle/g, "Major Mangle")
+    .replace(/Minor\sMangle/g, "Minor Mangle")
     .replace(
       /Major\sUncertainty/g,
-      "<span class='debuff'>Major Uncertainty</span>"
+      "Major Uncertainty"
     )
     .replace(
       /Minor\sUncertainty/g,
-      "<span class='debuff'>Minor Uncertainty</span>"
+      "Minor Uncertainty"
     )
     .replace(
       /Major\sVulnerability/g,
-      "<span class='debuff'>Major Vulnerability</span>"
+      "Major Vulnerability"
     )
     .replace(
       /Minor\sVulnerability/g,
-      "<span class='debuff'>Minor Vulnerability</span>"
+      "Minor Vulnerability"
     )
-    .replace("Armor", "<span class='armor'>Armor</span>");
 }
 
 module.exports = { spanWrapper };

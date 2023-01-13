@@ -8,6 +8,10 @@ const typeDefs = `
     name: String!
     type: String!
     bonuses: String!
+    traits: Int!
+    location: String
+    dlc: String
+    obtainableItems: [String!]
   }
 `;
 
